@@ -1,5 +1,22 @@
+.button__input {
+   background-color: teal;
+   color: white;
+   padding: 8px;
+   border: none;
+}
+
 .button__done {
    background: green;
    width: 25px;
    height: 25px;
+   color: white;
+
+}
+
+.button__remove {
+   background: crimson;
+   width: 25px;
+   height: 25px;
+   color: white;
+
 }

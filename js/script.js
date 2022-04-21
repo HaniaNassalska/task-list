@@ -52,10 +52,10 @@
             <li 
             class="list__item${task.done ? " list__item--done" : ""}"
             >
-            <button class="js-buttonDone button__done">${task.done ? "✔" : ""}</button>
+            <button class="js-buttonDone button__done" ${task.done ? "alt=\"Zadanie zrealizowane\"" : "alt=\"Zadanie niezrealizowane\""}>${task.done ? "✔" : ""}</button>
 
             ${task.content}
-            <button class="js-buttonRemove button__romove">🗑</button>
+           <button class="js-buttonRemove button__remove" alt="Usuń zadanie">🗑</button>
             </li>
             `;
         }

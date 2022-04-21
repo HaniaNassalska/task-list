@@ -5,3 +5,7 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+.style {
+    background-color:#e8e8ee;
+    font-family: "Montserrat", sans-serif;
+}
