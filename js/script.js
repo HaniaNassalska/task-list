@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "test",
-            done: true,
-        },
-        {
-            content: "test",
-            done: false,
-        },
+       
     ];
     const removeTask = (index) => {
         tasks.splice(index, 1);
@@ -50,12 +43,12 @@
             
 
             <li 
-            class="list__item${task.done ? " list__item--done" : ""}"
+            class="taskList__item" 
             >
             <button class="js-buttonDone button__done" ${task.done ? "alt=\"Zadanie zrealizowane\"" : "alt=\"Zadanie niezrealizowane\""}>${task.done ? "✔" : ""}</button>
 
-            ${task.content}
-           <button class="js-buttonRemove button__remove" alt="Usuń zadanie">🗑</button>
+            <span class="${task.done ? "tasks__content--done" : ""}"  >${task.content}</span>
+           <button class="js-buttonRemove button__remove" alt="Usuń zadanie">🗑</button></div>
             </li>
             `;
         }

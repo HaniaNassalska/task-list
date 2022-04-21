@@ -1,5 +1,6 @@
 .conatainer {
     margin: 0 auto;
     
-    max-width: 70%;
+    max-width: 68%;
+    word-break: break-word;
 }

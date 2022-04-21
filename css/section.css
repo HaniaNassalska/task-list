@@ -2,10 +2,10 @@
     background-color: white;
 }
 .section__header {
-    padding-left: 15px;
+    padding-left: 20px;
     padding-top: 18px;
     font-size: 20px;
 }
 .section__decorationLine {
-    border-bottom: solid 1px #e8e8ee;
+    border-bottom: solid 1.5px #e8e8ee;
 }

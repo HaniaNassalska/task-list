@@ -7,16 +7,18 @@
 
 .button__done {
    background: green;
-   width: 25px;
-   height: 25px;
+   width: 30px;
+   height: 30px;
    color: white;
+   border: none;
 
 }
 
 .button__remove {
    background: crimson;
-   width: 25px;
-   height: 25px;
+   width: 30px;
+   height: 30px;
    color: white;
+   border: none;
 
 }
