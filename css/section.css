@@ -1,11 +1,15 @@
 .section {
     background-color: white;
+    margin-bottom: 1px;
 }
+
 .section__header {
     padding-left: 20px;
     padding-top: 18px;
     font-size: 20px;
+    margin-top: 8px;
 }
+
 .section__decorationLine {
     border-bottom: solid 1.5px #e8e8ee;
 }

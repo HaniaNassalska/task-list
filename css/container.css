@@ -1,6 +1,14 @@
 .conatainer {
     margin: 0 auto;
-    
-    max-width: 68%;
+    max-width: 60%;
     word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .conatainer {
+        margin: 0 auto;
+        max-width: 90%;
+        word-break: break-word;
+
+    }
 }

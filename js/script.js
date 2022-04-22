@@ -30,11 +30,15 @@
     }
     const onFormSubmit = (event) => {
         event.preventDefault();
+        newTaskElement = document.querySelector(".js-newTask")
         newTaskContent = document.querySelector(".js-newTask").value.trim();
         if (newTaskContent === ``) {
             return;
         }
         addNewTask(newTaskContent);
+        newTaskElement.value="";
+        newTaskElement.focus();
+
     };
     const render = () => {
         let htmlString = "";
