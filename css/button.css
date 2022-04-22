@@ -1,5 +1,5 @@
 .button__input {
-   background-color: #00737f;
+   background-color: #007380;
    color: white;
    padding: 8px;
    border: none;
@@ -23,7 +23,7 @@
 }
 
 .button__remove {
-   background: #ec293a;
+   background: #ec293d;
    width: 30px;
    height: 30px;
    color: white;
