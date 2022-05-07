@@ -1,15 +1,24 @@
 {
-    const tasks = [
+    let tasks = [
 
     ];
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1)]
         render();
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        tasks = [
+            ...tasks.slice(0, index),
+            {
+                ...tasks[index],
+                done: !tasks[index].done,
+            },
+            ...tasks.slice(index + 1)
+        ];
         render();
 
     };
@@ -66,9 +75,11 @@
     };
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent }
+        ];
+
         render();
     };
 
