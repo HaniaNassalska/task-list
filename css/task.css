@@ -16,3 +16,7 @@
 .taskList_content--done {
     text-decoration: line-through;
 }
+
+.taskList__hiddenTasks {
+display: none;
+};
