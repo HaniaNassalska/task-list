@@ -13,3 +13,54 @@
 .section__decorationLine {
     border-bottom: solid 1.5px #e8e8ee;
 }
+
+.section__taskList {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3;
+}
+
+@media (max-width: 768px) {
+    .section__taskList {
+        grid-template-columns: 1fr 200px 1fr;
+        grid-template-rows: 4;
+    }
+}
+
+.section__header--position {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+
+.section__buttons {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row-start: 1;
+    justify-content: end;
+    align-content: end;
+}
+
+@media (max-width: 768px) {
+    .section__buttons {
+
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.section__decorationLine--position {
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.section__listOfTasks {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}

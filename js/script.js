@@ -2,6 +2,7 @@
     let tasks = [
 
     ];
+
     let hideDoneTasks = false;
 
     const removeTask = (index) => {
@@ -21,21 +22,21 @@
             ...tasks.slice(index + 1)
         ];
         render();
-
     };
+
     const completeAllTasks = () => {
         tasks = tasks.map((tasks) => ({
             ...tasks,
             done: true,
         }));
         render();;
-
     };
 
     const toggleHideDoneTasks = () => {
         hideDoneTasks = !hideDoneTasks
         render();
     };
+
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-buttonRemove");
         removeButtons.forEach((removeButton, index) => {
@@ -43,8 +44,8 @@
                 removeTask(index);
             });
         });
-
     };
+
     const bindToggleDoneEvents = () => {
         const doneToggleButtons = document.querySelectorAll(".js-buttonDone");
 
@@ -56,15 +57,11 @@
         });
     };
 
-
-
-
     const bindCompleteAllTasks = () => {
         const completeAllButton = document.querySelector(".js-completeAllTasks");
         if (completeAllButton) {
             completeAllButton.addEventListener("click", completeAllTasks);
-        }
-
+        };
     };
 
     const bindHideDoneTasks = () => {
@@ -74,25 +71,24 @@
         };
     };
 
-
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         newTaskElement = document.querySelector(".js-newTask")
         newTaskContent = document.querySelector(".js-newTask").value.trim();
         if (newTaskContent === ``) {
             return;
-        }
+        };
+
         addNewTask(newTaskContent);
         newTaskElement.value = "";
         newTaskElement.focus();
     };
+
     const renderTaks = () => {
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
         
-
         <li 
         class="taskList__item js-taskList__hidden ${task.done && hideDoneTasks ? " taskList__hiddenTasks" : ""}" 
         >
@@ -102,20 +98,22 @@
        <button class="js-buttonRemove button__remove" alt="Usuń zadanie">🗑</button></div>
         </li>
         `;
-        }
+        };
+
         document.querySelector(".js-taskList").innerHTML = htmlString;
     };
+
     const renderButtons = () => {
         let buttonsElement = "";
         if (tasks != "") {
             buttonsElement += `
     
-        <button class="js-hideDoneButton">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-        <button${tasks.every(({ done }) => done) ? ":disabled" : ""} class="js-completeAllTasks js-hideButton" >Ukończ wszystkie</button>
-            `;
-        }
-        document.querySelector(".js-buttonAllDoneHideDone").innerHTML = buttonsElement;
+        <button class="js-hideDoneButton button__hideDone">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+        <button${tasks.every(({ done }) => done) ? " disabled" : ""} class="js-completeAllTasks js-hideButton button__completeAllTasks" >Ukończ wszystkie</button>
+         `;
+        };
 
+        document.querySelector(".js-buttonAllDoneHideDone").innerHTML = buttonsElement;
     };
 
     const render = () => {

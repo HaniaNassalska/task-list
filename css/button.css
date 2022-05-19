@@ -4,15 +4,61 @@
    padding: 8px;
    border: none;
    margin: 15px 20px 20px 5px;
-   }
+   transition: 0.5s;
+}
 
-@media (max-width: 768px) {
-   .button__input {
-      margin: 0 15px 15px 15px;
+@media (min-width: 768px) {
+   .button__input:hover {
+      transform: scale(1.05);
+      background-color: #52b5c0;
+      cursor: pointer;
 
    }
 }
 
+@media (max-width: 768px) {
+   .button__input:hover {
+      background-color: #448c94;
+   }
+}
+
+@media (max-width: 768px) {
+   .button__input {
+      margin: 0 15px 15px 15px;
+   }
+}
+
+.button__hideDone {
+   background-color: transparent;
+   border: none;
+   color: #007380;
+   transition: 0.5s;
+   padding-top: 12px;
+}
+
+.button__hideDone:hover {
+   color: #52b5c0;
+   cursor: pointer;
+}
+
+.button__completeAllTasks {
+   background-color: transparent;
+   border: none;
+   color: #007380;
+   transition: 0.5s;
+   padding-top: 12px;
+}
+
+.button__completeAllTasks:hover {
+   color: #448c94;
+   cursor: pointer;
+}
+
+.button__completeAllTasks:disabled {
+   background-color: transparent;
+   border: none;
+   color: rgb(79, 79, 79);
+}
 
 .button__done {
    background: #1b7c1f;
@@ -20,6 +66,12 @@
    height: 30px;
    color: white;
    border: none;
+   transition: 0.5s;
+}
+
+.button__done:hover {
+   background: #1e9f22;
+   cursor: pointer;
 }
 
 .button__remove {
@@ -28,4 +80,10 @@
    height: 30px;
    color: white;
    border: none;
+   transition: 0.5s;
+}
+
+.button__remove:hover {
+   background: #fe4659;
+   cursor: pointer;
 }
