@@ -9,4 +9,5 @@ html {
 .style {
     background-color: #eeee;
     font-family: "Montserrat", sans-serif;
+    word-break: break-word;
 }

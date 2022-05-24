@@ -4,7 +4,7 @@
    padding: 8px;
    border: none;
    margin: 15px 20px 20px 5px;
-   transition: 0.5s;
+   transition: 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -32,7 +32,7 @@
    background-color: transparent;
    border: none;
    color: #007380;
-   transition: 0.5s;
+   transition: 0.3s;
    padding-top: 12px;
 }
 
@@ -45,12 +45,12 @@
    background-color: transparent;
    border: none;
    color: #007380;
-   transition: 0.5s;
+   transition: 0.3s;
    padding-top: 12px;
 }
 
 .button__completeAllTasks:hover {
-   color: #448c94;
+   color: #52b5c0;
    cursor: pointer;
 }
 
@@ -58,6 +58,8 @@
    background-color: transparent;
    border: none;
    color: rgb(79, 79, 79);
+   cursor: default;
+
 }
 
 .button__done {
@@ -66,7 +68,7 @@
    height: 30px;
    color: white;
    border: none;
-   transition: 0.5s;
+   transition: 0.3s;
 }
 
 .button__done:hover {
@@ -80,7 +82,7 @@
    height: 30px;
    color: white;
    border: none;
-   transition: 0.5s;
+   transition: 0.3s;
 }
 
 .button__remove:hover {
