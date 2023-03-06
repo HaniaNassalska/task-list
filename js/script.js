@@ -1,7 +1,5 @@
 {
-    let tasks = [
-
-    ];
+    let tasks = [];
 
     let hideDoneTasks = false;
 
@@ -39,6 +37,7 @@
 
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-buttonRemove");
+        
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
@@ -59,6 +58,7 @@
 
     const bindCompleteAllTasks = () => {
         const completeAllButton = document.querySelector(".js-completeAllTasks");
+        
         if (completeAllButton) {
             completeAllButton.addEventListener("click", completeAllTasks);
         };
@@ -66,6 +66,7 @@
 
     const bindHideDoneTasks = () => {
         const hideDoneTaskButton = document.querySelector(".js-hideDoneButton");
+        
         if (hideDoneTaskButton) {
             hideDoneTaskButton.addEventListener("click", toggleHideDoneTasks);
         };
@@ -75,6 +76,7 @@
         event.preventDefault();
         newTaskElement = document.querySelector(".js-newTask")
         newTaskContent = document.querySelector(".js-newTask").value.trim();
+        
         if (newTaskContent === ``) {
             return;
         };

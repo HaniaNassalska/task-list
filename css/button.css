@@ -12,7 +12,6 @@
       transform: scale(1.05);
       background-color: #52b5c0;
       cursor: pointer;
-
    }
 }
 
@@ -59,7 +58,6 @@
    border: none;
    color: rgb(79, 79, 79);
    cursor: default;
-
 }
 
 .button__done {
